@@ -8,37 +8,65 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: _defaultMat
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: bd575ef53d96ac7469bad20e59729df3, type: 2}
+=======
+    second: {fileID: 2100000, guid: 84ccc0e5d0d104fd997f877c03592921, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: carTire
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 0011b21ca593f4f428b13c2ad19d027e, type: 2}
+=======
+    second: {fileID: 2100000, guid: b4624b53fd0af414383b1cff9f02a24c, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lightFront
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 4c20d783be96eeb49a3fcf9f7224c019, type: 2}
+=======
+    second: {fileID: 2100000, guid: 0aba21c557f6445e293f1af2d75eaa8b, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: paintBlue
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 69a1301af4e716e448651fea2d504ad2, type: 2}
+=======
+    second: {fileID: 2100000, guid: 85856941f529f4e8eb1f817f06d42c90, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: paintYellow
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 089bd005900e8ec419ab1f8b369aae69, type: 2}
+=======
+    second: {fileID: 2100000, guid: cc1c2fffe34a84880bd345054651e120, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: plastic
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 7a4a9aef3b1a03d46a1ad07e7c82543b, type: 2}
+=======
+    second: {fileID: 2100000, guid: 70852dc56e4a84733b781b8e78e5b492, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: window
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: 86cb525f8f0b57f48a35a1d59c981e0f, type: 2}
+=======
+    second: {fileID: 2100000, guid: cbd183cc948b54c348a393048ad1da4b, type: 2}
+>>>>>>> 61cfa3e62074d9173869d6046d2084eafd1e0705
   materials:
     materialImportMode: 2
     materialName: 0
