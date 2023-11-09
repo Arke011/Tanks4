@@ -16,4 +16,15 @@ public class Ineedmorebullets : MonoBehaviour
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+
+        if (collision.gameObject.tag == "boom")
+        {
+            collision.gameObject.GetComponent<Health>().Die();
+            
+        }
+    }
 }
