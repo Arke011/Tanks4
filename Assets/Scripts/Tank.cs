@@ -12,16 +12,23 @@ public class Tank : MonoBehaviour
     public KeyCode shootKey;
 
     public GameObject bullet;
-
     public Transform shootPoint;
+    public AudioClip shootSound; 
+    private AudioSource audioSource;
 
-    
-
+    void Start()
+    {
+        
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = shootSound;
+    }
 
     void Update()
     {
         var ver = Input.GetAxis(vertical);
-        transform.position += transform.forward * speed * ver * Time.deltaTime;
+        
+        GetComponent<Rigidbody>().velocity = transform.forward * speed * ver;
 
         var hor = Input.GetAxis(horizontal);
         transform.Rotate(0, rotateSpeed * hor * Time.deltaTime, 0);
@@ -29,6 +36,8 @@ public class Tank : MonoBehaviour
         if (Input.GetKeyDown(shootKey))
         {
             Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+            audioSource.Play();
         }
     }
 }
+
