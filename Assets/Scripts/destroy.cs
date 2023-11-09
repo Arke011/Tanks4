@@ -10,24 +10,24 @@ public class BreakableObject : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (isBroken) return; 
+        if (isBroken) return;
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            BreakObject();
+            ExplodeCubes();
             isBroken = true;
         }
     }
 
-    void BreakObject()
+    void ExplodeCubes()
     {
-        for (int i = 0; i < 20; i++) 
+        for (int i = 0; i < 6; i++)
         {
             Vector3 cubeSpawnPosition = transform.position;
             Instantiate(cubePrefab, cubeSpawnPosition, Quaternion.identity);
         }
 
-        Destroy(gameObject); 
+        Destroy(gameObject);
     }
 }
 
