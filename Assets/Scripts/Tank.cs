@@ -13,31 +13,56 @@ public class Tank : MonoBehaviour
 
     public GameObject bullet;
     public Transform shootPoint;
-    public AudioClip shootSound; 
-    private AudioSource audioSource;
+    public AudioClip shootSound;
+    public AudioClip movementSound;
+    private AudioSource shootAudioSource;
+    private AudioSource movementAudioSource;
+
+    // Adjust this value to set the volume of the movement sound
+    private float movementVolume = 0.2f;
 
     void Start()
     {
-        
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
-        audioSource.clip = shootSound;
+        shootAudioSource = gameObject.AddComponent<AudioSource>();
+        shootAudioSource.playOnAwake = false;
+        shootAudioSource.clip = shootSound;
+
+        movementAudioSource = gameObject.AddComponent<AudioSource>();
+        movementAudioSource.playOnAwake = false;
+        movementAudioSource.clip = movementSound;
+        movementAudioSource.volume = movementVolume; // Set the initial volume
     }
 
     void Update()
     {
         var ver = Input.GetAxis(vertical);
-        
-        GetComponent<Rigidbody>().velocity = transform.forward * speed * ver;
-
         var hor = Input.GetAxis(horizontal);
+
+        if (ver != 0 || hor != 0)
+        {
+            if (!movementAudioSource.isPlaying)
+            {
+                movementAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (movementAudioSource.isPlaying)
+            {
+                movementAudioSource.Stop();
+            }
+        }
+
+        GetComponent<Rigidbody>().velocity = transform.forward * speed * ver;
         transform.Rotate(0, rotateSpeed * hor * Time.deltaTime, 0);
 
         if (Input.GetKeyDown(shootKey))
         {
             Instantiate(bullet, shootPoint.position, shootPoint.rotation);
-            audioSource.Play();
+            shootAudioSource.Play();
         }
     }
 }
+
+
 
